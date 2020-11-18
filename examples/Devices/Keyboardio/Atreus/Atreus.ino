@@ -28,6 +28,7 @@
 #include "Kaleidoscope-Macros.h"
 #include "Kaleidoscope-MouseKeys.h"
 #include "Kaleidoscope-OneShot.h"
+#include <Kaleidoscope-Escape-OneShot.h>
 #include "Kaleidoscope-Qukeys.h"
 #include "Kaleidoscope-SpaceCadet.h"
 
@@ -109,6 +110,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   Qukeys,
   SpaceCadet,
   OneShot,
+  EscapeOneShot,
   Macros,
   MouseKeys
 );
