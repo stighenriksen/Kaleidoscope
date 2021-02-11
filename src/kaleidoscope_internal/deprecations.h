@@ -33,7 +33,7 @@
   "'active keys' cache, which now represents the state of the active\n" __NL__ \
   "keys at any given time. It is probably not necessary to directly\n"  __NL__ \
   "update that cache from a plugin, but if you need to, please use\n"   __NL__ \
-  "the `Runtime.updateActiveKey(key_addr, key)` function instead."
+  "the `Bindings.updateActiveBinding(key_addr, key)` function instead."
 
 #define _DEPRECATED_MESSAGE_LAYER_EVENTHANDLER               __NL__ \
   "`Layer.eventHandler()` is deprecated.\n"                  __NL__ \

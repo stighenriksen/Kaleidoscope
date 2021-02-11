@@ -50,7 +50,7 @@ EventHandlerResult ShapeShifter::onKeyswitchEvent(Key &mapped_key, KeyAddr key_a
   bool shift_detected = false;
 
   for (KeyAddr k : KeyAddr::all()) {
-    if (Runtime.activeKey(k).isKeyboardShift())
+    if (::Bindings.activeBinding(k).isKeyboardShift())
       shift_detected = true;
   }
   if (! shift_detected)

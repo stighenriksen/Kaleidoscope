@@ -21,6 +21,7 @@
 #include "kaleidoscope/keymaps.h"
 #include "kaleidoscope/device/device.h"
 #include "kaleidoscope/Runtime.h"
+#include "kaleidoscope/Bindings.h"
 #include "kaleidoscope_internal/device.h"
 #include "kaleidoscope_internal/sketch_exploration/sketch_exploration.h"
 #include "kaleidoscope_internal/shortname.h"
@@ -85,7 +86,7 @@ class Layer_ {
    */
   static Key lookup(KeyAddr key_addr) {
     // First check the active keys array
-    Key key = Runtime.activeKey(key_addr);
+    Key key = ::Bindings.activeBinding(key_addr);
     // If that entry is clear, look up the entry from the active keymap layers
     if (key == Key_Transparent) {
       key = lookupOnActiveLayer(key_addr);
@@ -123,7 +124,7 @@ class Layer_ {
 
   DEPRECATED(LAYER_UPDATELIVECOMPOSITEKEYMAP)
   static void updateLiveCompositeKeymap(KeyAddr key_addr, Key mappedKey) {
-    Runtime.updateActiveKey(key_addr, mappedKey);
+    ::Bindings.updateActiveBinding(key_addr, mappedKey);
   }
   DEPRECATED(LAYER_UPDATELIVECOMPOSITEKEYMAP)
   static void updateLiveCompositeKeymap(KeyAddr key_addr);

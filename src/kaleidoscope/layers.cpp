@@ -126,7 +126,7 @@ void Layer_::updateLiveCompositeKeymap(KeyAddr key_addr) {
   // `Key` value is specified, this function no longer serves a purpose.
 
   // int8_t layer = active_layer_keymap_[key_addr.toInt()];
-  // Runtime.updateActiveKey(key_addr, (*getKey)(layer, key_addr));
+  // Bindings.updateActiveBinding(key_addr, (*getKey)(layer, key_addr));
 }
 
 void Layer_::updateActiveLayers(void) {

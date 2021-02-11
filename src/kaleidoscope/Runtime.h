@@ -19,6 +19,7 @@
 #include "kaleidoscope_internal/device.h"
 #include "kaleidoscope/event_handler_result.h"
 #include "kaleidoscope/hooks.h"
+#include "kaleidoscope/Bindings.h"
 
 namespace kaleidoscope {
 
@@ -128,16 +129,8 @@ class Runtime_ {
     return kaleidoscope::Hooks::onFocusEvent(command);
   }
 
-  static Key activeKey(KeyAddr key_addr) {
-    return active_keys_[key_addr.toInt()];
-  }
-  static void updateActiveKey(KeyAddr key_addr, Key key) {
-    active_keys_[key_addr.toInt()] = key;
-  }
-
  private:
   static uint32_t millis_at_cycle_start_;
-  static Key active_keys_[kaleidoscope_internal::device.numKeys()];
 };
 
 extern kaleidoscope::Runtime_ Runtime;
