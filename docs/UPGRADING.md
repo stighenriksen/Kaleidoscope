@@ -7,6 +7,7 @@ If any of this does not make sense to you, or you have trouble updating your .in
 
 * [Upgrade notes](#upgrade-notes)
   + [New features](#new-features)
+    - [Keymap cache changes](#keymap-cache-changes)
     - [New build system](#new-build-system)
     - [New device API](#new-device-api)
     - [New plugin API](#new-plugin-api)
